@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eisdiele Minigame</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        #gameContainer { width: 800px; height: 600px; margin: 0 auto; position: relative; }
+        #theke { width: 100%; height: 100px; background: #8B4513; position: absolute; bottom: 0; }
+        #orderDisplay { position: absolute; top: 10px; right: 10px; }
+        .waffle, .becher, .iceCream, .topping, .sauce { cursor: pointer; margin: 10px; }
+        #money { margin-top: 20px; }
+        canvas { border: 1px solid black; }
+    </style>
+</head>
+<body>
+    <div id="gameContainer">
+        <h1>Eisdiele Minigame</h1>
+        <div id="orderDisplay">Bestellung: </div>
+        <div id="theke"></div>
+        <canvas id="canvas" width="800" height="500"></canvas>
+        <div>
+            <button class="iceCream" data-flavor="Schokolade" style="background: brown;">Schokolade</button>
+            <button class="iceCream" data-flavor="Vanille" style="background: yellow;">Vanille</button>
+            <button class="iceCream" data-flavor="Stracciatella" style="background: #D2B48C;">Stracciatella</button>
+            <button class="iceCream" data-flavor="Haselnuss" style="background: #C0C0C0;">Haselnuss</button>
+            <button class="waffle" data-container="Waffel">Waffel</button>
+            <button class="becher" data-container="Becher">Becher</button>
+            <button class="topping" data-topping="Streusel" style="background: #FFD700;">Streusel</button>
+            <button class="topping" data-topping="Nüsse" style="background: #D2691E;">Nüsse</button>
+            <button class="sauce" data-sauce="Schokosauce" style="background: #8B4513;">Schokosauce</button>
+            <button class="sauce" data-sauce="Erdbeersauce" style="background: #FF6347;">Erdbeersauce</button>
+        </div>
+        <div id="money">Geld: 0€</div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
